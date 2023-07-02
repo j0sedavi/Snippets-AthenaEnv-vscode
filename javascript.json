@@ -1,0 +1,1578 @@
+//snippets created by DaviZ7 
+{
+"std.evalScript": {
+  "prefix": "evalScript",
+  "body": [
+    "std.evalScript($1)"
+  ],
+  "description": "Evaluate the string as a script."
+},
+"std.loadScript": {
+  "prefix": "loadScript",
+  "body": [
+    "std.loadScript($1)"
+  ],
+  "description": "Evaluate the file as a script."
+},
+"std.loadFile": {
+  "prefix": "loadFile",
+  "body": [
+    "let fstr = std.loadFile($1)"
+  ],
+  "description": "Load the file and return it as a string."
+},
+"std.open": {
+  "prefix": "open",
+  "body": [
+    "let file = std.open($1, $2)"
+  ],
+  "description": "Open a file."
+},
+"std.fdopen": {
+  "prefix": "fdopen",
+  "body": [
+    "let file = std.fdopen($1, $2)"
+  ],
+  "description": "Open a file from a file handle."
+},
+"std.tmpfile": {
+  "prefix": "tmpfile",
+  "body": [
+    "let file = std.tmpfile()"
+  ],
+  "description": "Open a temporary file."
+},
+"std.puts": {
+  "prefix": "puts",
+  "body": [
+    "std.puts($1)"
+  ],
+  "description": "Print a string to standard output."
+},
+"std.printf": {
+  "prefix": "printf",
+  "body": [
+    "std.printf($1, ...$2)"
+  ],
+  "description": "Formatted printing to standard output."
+},
+"std.sprintf": {
+  "prefix": "sprintf",
+  "body": [
+    "std.sprintf($1, ...$2)"
+  ],
+  "description": "Formatted string creation."
+},
+"std.in": {
+  "prefix": "in",
+  "body": [
+    "std.in"
+  ],
+  "description": "Standard input file."
+},
+"std.out": {
+  "prefix": "out",
+  "body": [
+    "std.out"
+  ],
+  "description": "Standard output file."
+},
+"std.err": {
+  "prefix": "err",
+  "body": [
+    "std.err"
+  ],
+  "description": "Standard error file."
+},
+"std.SEEK_SET": {
+  "prefix": "SEEK_SET",
+  "body": [
+    "std.SEEK_SET"
+  ],
+  "description": "Constant for seek()."
+},
+"std.SEEK_CUR": {
+  "prefix": "SEEK_CUR",
+  "body": [
+    "std.SEEK_CUR"
+  ],
+  "description": "Constant for seek()."
+},
+"std.SEEK_END": {
+  "prefix": "SEEK_END",
+  "body": [
+    "std.SEEK_END"
+  ],
+  "description": "Constant for seek()."
+},
+"std.EINVAL": {
+  "prefix": "EINVAL",
+  "body": [
+    "std.EINVAL"
+  ],
+  "description": "Integer value of EINVAL error."
+},
+"std.EIO": {
+  "prefix": "EIO",
+  "body": [
+    "std.EIO"
+  ],
+  "description": "Integer value of EIO error."
+},
+"std.EACCES": {
+  "prefix": "EACCES",
+  "body": [
+    "std.EACCES"
+  ],
+  "description": "Integer value of EACCES error."
+},
+"std.EEXIST": {
+  "prefix": "EEXIST",
+  "body": [
+    "std.EEXIST"
+  ],
+  "description": "Integer value of EEXIST error."
+},
+"std.ENOSPC": {
+  "prefix": "ENOSPC",
+  "body": [
+    "std.ENOSPC"
+  ],
+  "description": "Integer value of ENOSPC error."
+},
+"std.ENOSYS": {
+  "prefix": "ENOSYS",
+  "body": [
+    "std.ENOSYS"
+  ],
+  "description": "Integer value of ENOSYS error."
+},
+"std.EBUSY": {
+  "prefix": "EBUSY",
+  "body": [
+    "std.EBUSY"
+  ],
+  "description": "Integer value of EBUSY error."
+},
+"std.ENOENT": {
+  "prefix": "ENOENT",
+  "body": [
+    "std.ENOENT"
+  ],
+  "description": "Integer value of ENOENT error."
+},
+"std.EPERM": {
+  "prefix": "EPERM",
+  "body": [
+    "std.EPERM"
+  ],
+  "description": "Integer value of EPERM error."
+},
+"std.EPIPE": {
+  "prefix": "EPIPE",
+  "body": [
+    "std.EPIPE"
+  ],
+  "description": "Integer value of EPIPE error."
+},
+"std.strerror": {
+  "prefix": "strerror",
+  "body": [
+    "std.strerror($1)"
+  ],
+  "description": "Get error description string."
+},
+"std.gc": {
+  "prefix": "gc",
+  "body": [
+    "std.gc()"
+  ],
+  "description": "Manually invoke the cycle removal algorithm."
+},
+"std.parseExtJSON": {
+  "prefix": "parseExtJSON",
+  "body": [
+    "std.parseExtJSON($1)"
+  ],
+  "description": "Parse a string using a superset of JSON.parse."
+}
+"close": {
+  "prefix": "close",
+  "body": [
+    "close()"
+  ],
+  "description": "Close the file."
+},
+"puts": {
+  "prefix": "puts",
+  "body": [
+    "puts($1)"
+  ],
+  "description": "Output the string."
+},
+"printf": {
+  "prefix": "printf",
+  "body": [
+    "printf($1, ...$2)"
+  ],
+  "description": "Formatted printf."
+},
+"flush": {
+  "prefix": "flush",
+  "body": [
+    "flush()"
+  ],
+  "description": "Flush the buffered file."
+},
+"seek": {
+  "prefix": "seek",
+  "body": [
+    "seek($1, $2)"
+  ],
+  "description": "Seek to a given file position."
+},
+"tell": {
+  "prefix": "tell",
+  "body": [
+    "tell()"
+  ],
+  "description": "Return the current file position."
+},
+"tello": {
+  "prefix": "tello",
+  "body": [
+    "tello()"
+  ],
+  "description": "Return the current file position as a bigint."
+},
+"eof": {
+  "prefix": "eof",
+  "body": [
+    "eof()"
+  ],
+  "description": "Check if end of file."
+},
+"fileno": {
+  "prefix": "fileno",
+  "body": [
+    "fileno()"
+  ],
+  "description": "Return the associated OS handle."
+},
+"error": {
+  "prefix": "error",
+  "body": [
+    "error()"
+  ],
+  "description": "Check if there was an error."
+},
+"clearerr": {
+  "prefix": "clearerr",
+  "body": [
+    "clearerr()"
+  ],
+  "description": "Clear the error indication."
+},
+"read": {
+  "prefix": "read",
+  "body": [
+    "read($1, $2, $3)"
+  ],
+  "description": "Read bytes from the file to the ArrayBuffer."
+},
+"write": {
+  "prefix": "write",
+  "body": [
+    "write($1, $2, $3)"
+  ],
+  "description": "Write bytes to the file from the ArrayBuffer."
+},
+"getline": {
+  "prefix": "getline",
+  "body": [
+    "getline()"
+  ],
+  "description": "Return the next line from the file."
+},
+"readAsString": {
+  "prefix": "readAsString",
+  "body": [
+    "readAsString($1)"
+  ],
+  "description": "Read bytes from the file and return as a string."
+},
+"getByte": {
+  "prefix": "getByte",
+  "body": [
+    "getByte()"
+  ],
+  "description": "Return the next byte from the file."
+},
+"putByte": {
+  "prefix": "putByte",
+  "body": [
+    "putByte($1)"
+  ],
+  "description": "Write one byte to the file."
+}
+"let fd = os.open": {
+  "prefix": "os.open",
+  "body": [
+    "let fd = os.open($1, $2, $3)"
+  ],
+  "description": "Open a file."
+},
+"os.close": {
+  "prefix": "os.close",
+  "body": [
+    "os.close($1)"
+  ],
+  "description": "Close the file handle."
+},
+"os.seek": {
+  "prefix": "os.seek",
+  "body": [
+    "os.seek($1, $2, $3)"
+  ],
+  "description": "Seek in the file."
+},
+"os.read": {
+  "prefix": "os.read",
+  "body": [
+    "os.read($1, $2, $3, $4)"
+  ],
+  "description": "Read bytes from the file handle to the ArrayBuffer."
+},
+"os.write": {
+  "prefix": "os.write",
+  "body": [
+    "os.write($1, $2, $3, $4)"
+  ],
+  "description": "Write bytes to the file handle from the ArrayBuffer."
+},
+"os.remove": {
+  "prefix": "os.remove",
+  "body": [
+    "os.remove($1)"
+  ],
+  "description": "Remove a file."
+},
+"os.rename": {
+  "prefix": "os.rename",
+  "body": [
+    "os.rename($1, $2)"
+  ],
+  "description": "Rename a file."
+},
+"os.realpath": {
+  "prefix": "os.realpath",
+  "body": [
+    "os.realpath($1)"
+  ],
+  "description": "Return the canonicalized absolute pathname of a path."
+},
+"os.getcwd": {
+  "prefix": "os.getcwd",
+  "body": [
+    "os.getcwd()"
+  ],
+  "description": "Return the current working directory."
+},
+"os.chdir": {
+  "prefix": "os.chdir",
+  "body": [
+    "os.chdir($1)"
+  ],
+  "description": "Change the current directory."
+},
+"os.mkdir": {
+  "prefix": "os.mkdir",
+  "body": [
+    "os.mkdir($1, $2)"
+  ],
+  "description": "Create a directory."
+},
+"os.stat": {
+  "prefix": "os.stat",
+  "body": [
+    "os.stat($1)"
+  ],
+  "description": "Return the file status of a path."
+},
+"os.lstat": {
+  "prefix": "os.lstat",
+  "body": [
+    "os.lstat($1)"
+  ],
+  "description": "Return the file status of a link."
+},
+"os.utimes": {
+  "prefix": "os.utimes",
+  "body": [
+    "os.utimes($1, $2, $3)"
+  ],
+  "description": "Change the access and modification times of a file."
+},
+"os.readdir": {
+  "prefix": "os.readdir",
+  "body": [
+    "os.readdir($1)"
+  ],
+  "description": "Return the filenames of a directory."
+},
+"os.setReadHandler": {
+  "prefix": "os.setReadHandler",
+  "body": [
+    "os.setReadHandler($1, $2)"
+  ],
+  "description": "Add a read handler to the file handle."
+},
+"os.setWriteHandler": {
+  "prefix": "os.setWriteHandler",
+  "body": [
+    "os.setWriteHandler($1, $2)"
+  ],
+  "description": "Add a write handler to the file handle."
+},
+"os.sleep": {
+  "prefix": "os.sleep",
+  "body": [
+    "os.sleep($1)"
+  ],
+  "description": "Sleep for a specified number of milliseconds."
+},
+"os.setTimeout": {
+  "prefix": "os.setTimeout",
+  "body": [
+    "os.setTimeout($1, $2)"
+  ],
+  "description": "Call a function after a specified delay."
+},
+"os.setInterval": {
+  "prefix": "os.setInterval",
+  "body": [
+    "os.setInterval($1, $2)"
+  ],
+  "description": "Call a function at specified intervals."
+},
+"os.setImmediate": {
+  "prefix": "os.setImmediate",
+  "body": [
+    "os.setImmediate($1)"
+  ],
+  "description": "Execute a function immediately."
+},
+"os.clearTimeout": {
+  "prefix": "os.clearTimeout",
+  "body": [
+    "os.clearTimeout($1)"
+  ],
+  "description": "Cancel a timer."
+},
+"os.clearInterval": {
+  "prefix": "os.clearInterval",
+  "body": [
+    "os.clearInterval($1)"
+  ],
+  "description": "Cancel an interval."
+},
+"os.clearImmediate": {
+  "prefix": "os.clearImmediate",
+  "body": [
+    "os.clearImmediate($1)"
+  ],
+  "description": "Cancel an immediate execution."
+},
+"os.platform": {
+  "prefix": "os.platform",
+  "body": [
+    "os.platform"
+  ],
+  "description": "Return the platform."
+}
+"var col = Color.new": {
+  "prefix": "Color.new",
+  "body": [
+    "var col = Color.new($1, $2, $3, $4)"
+  ],
+  "description": "Create a color object."
+},
+"var r = Color.getR": {
+  "prefix": "Color.getR",
+  "body": [
+    "var r = Color.getR($1)"
+  ],
+  "description": "Get red intensity of the color."
+},
+"var g = Color.getG": {
+  "prefix": "Color.getG",
+  "body": [
+    "var g = Color.getG($1)"
+  ],
+  "description": "Get green intensity of the color."
+},
+"var b = Color.getB": {
+  "prefix": "Color.getB",
+  "body": [
+    "var b = Color.getB($1)"
+  ],
+  "description": "Get blue intensity of the color."
+},
+"var a = Color.getA": {
+  "prefix": "Color.getA",
+  "body": [
+    "var a = Color.getA($1)"
+  ],
+  "description": "Get alpha intensity of the color."
+},
+"Color.setR": {
+  "prefix": "Color.setR",
+  "body": [
+    "Color.setR($1, $2)"
+  ],
+  "description": "Set red intensity of the color."
+},
+"Color.setG": {
+  "prefix": "Color.setG",
+  "body": [
+    "Color.setG($1, $2)"
+  ],
+  "description": "Set green intensity of the color."
+},
+"Color.setB": {
+  "prefix": "Color.setB",
+  "body": [
+    "Color.setB($1, $2)"
+  ],
+  "description": "Set blue intensity of the color."
+},
+"Color.setA": {
+  "prefix": "Color.setA",
+  "body": [
+    "Color.setA($1, $2)"
+  ],
+  "description": "Set alpha intensity of the color."
+},
+"var image = new Image": {
+  "prefix": "Image.new",
+  "body": [
+    "var image = new Image($1, $2, $3)"
+  ],
+  "description": "Create a new image object."
+},
+"image.draw": {
+  "prefix": "image.draw",
+  "body": [
+    "image.draw($1, $2)"
+  ],
+  "description": "Draw the image onscreen."
+},
+"image.ready": {
+  "prefix": "image.ready",
+  "body": [
+    "var loaded = image.ready()"
+  ],
+  "description": "Check if the image is ready."
+},
+"var async_list = new ImageList": {
+  "prefix": "ImageList.new",
+  "body": [
+    "var async_list = new ImageList()"
+  ],
+  "description": "Create a new ImageList object."
+},
+"async_list.process": {
+  "prefix": "async_list.process",
+  "body": [
+    "async_list.process()"
+  ],
+  "description": "Start the thread to load images in the background."
+}
+"Draw.point": {
+  "prefix": "Draw.point",
+  "body": [
+    "Draw.point($1, $2, $3)"
+  ],
+  "description": "Draw a pixel on the screen."
+},
+"Draw.rect": {
+  "prefix": "Draw.rect",
+  "body": [
+    "Draw.rect($1, $2, $3, $4, $5)"
+  ],
+  "description": "Draw a rectangle on the screen."
+},
+"Draw.line": {
+  "prefix": "Draw.line",
+  "body": [
+    "Draw.line($1, $2, $3, $4, $5)"
+  ],
+  "description": "Draw a line on the screen."
+},
+"Draw.circle": {
+  "prefix": "Draw.circle",
+  "body": [
+    "Draw.circle($1, $2, $3, $4, $5)"
+  ],
+  "description": "Draw a circle on the screen."
+},
+"Draw.triangle": {
+  "prefix": "Draw.triangle",
+  "body": [
+    "Draw.triangle($1, $2, $3, $4, $5, $6, $7, $8, $9)"
+  ],
+  "description": "Draw a triangle on the screen."
+},
+"Draw.quad": {
+  "prefix": "Draw.quad",
+  "body": [
+    "Draw.quad($1, $2, $3, $4, $5, $6, $7, $8, $9, ${10})"
+  ],
+  "description": "Draw a quad on the screen."
+},
+"Render.init": {
+  "prefix": "Render.init",
+  "body": [
+    "Render.init(${1:4/3})"
+  ],
+  "description": "Initialize rendering routines."
+},
+"var model = Render.loadOBJ": {
+  "prefix": "Render.loadOBJ",
+  "body": [
+    "var model = Render.loadOBJ($1, $2)"
+  ],
+  "description": "Load OBJ 3D data files."
+},
+"Render.drawOBJ": {
+  "prefix": "Render.drawOBJ",
+  "body": [
+    "Render.drawOBJ($1, $2, $3, $4, $5, $6, $7)"
+  ],
+  "description": "Draw the loaded OBJ on the screen."
+},
+"Render.freeOBJ": {
+  "prefix": "Render.freeOBJ",
+  "body": [
+    "Render.freeOBJ($1)"
+  ],
+  "description": "Free the model from memory."
+}
+"default 3d": {
+  "prefix": "default 3d",
+  "body": [
+    "const canvas = Screen.getMode();\ncanvas.zbuffering = true;\ncanvas.psmz = Z16S;\nScreen.setMode(canvas);\n"
+  ],
+  "description": "default 3d"
+}
+"Camera.position": {
+  "prefix": "Camera.position",
+  "body": [
+    "Camera.position($1, $2, $3)"
+  ],
+  "description": "Set the camera position."
+},
+"Camera.rotation": {
+  "prefix": "Camera.rotation",
+  "body": [
+    "Camera.rotation($1, $2, $3)"
+  ],
+  "description": "Set the camera rotation."
+},
+"Lights.create": {
+  "prefix": "Lights.create",
+  "body": [
+    "Lights.create($1)"
+  ],
+  "description": "Create lights."
+},
+"Lights.set": {
+  "prefix": "Lights.set",
+  "body": [
+    "Lights.set($1, $2, $3, $4, $5, $6, $7, $8)"
+  ],
+  "description": "Set light parameters."
+},
+"Screen.clear": {
+  "prefix": "Screen.clear",
+  "body": [
+    "Screen.clear(${1:black})"
+  ],
+  "description": "Clear the screen with the specified color."
+},
+"Screen.flip": {
+  "prefix": "Screen.flip",
+  "body": [
+    "Screen.flip()"
+  ],
+  "description": "Render the queue and update the screen."
+},
+"Screen.getFreeVRAM": {
+  "prefix": "Screen.getFreeVRAM",
+  "body": [
+    "var freevram = Screen.getFreeVRAM()"
+  ],
+  "description": "Get the total amount of free Video Memory."
+},
+"Screen.setVSync": {
+  "prefix": "Screen.setVSync",
+  "body": [
+    "Screen.setVSync(${1:true})"
+  ],
+  "description": "Toggle VSync."
+},
+"Screen.setFrameCounter": {
+  "prefix": "Screen.setFrameCounter",
+  "body": [
+    "Screen.setFrameCounter(${1:true})"
+  ],
+  "description": "Toggle frame counting and FPS collecting."
+},
+"Screen.waitVblankStart": {
+  "prefix": "Screen.waitVblankStart",
+  "body": [
+    "Screen.waitVblankStart()"
+  ],
+  "description": "Wait for a vertical sync."
+},
+"Screen.getFPS": {
+  "prefix": "Screen.getFPS",
+  "body": [
+    "var fps = Screen.getFPS(${1:frame_interval})"
+  ],
+  "description": "Get Frames per second within the specified frame interval."
+},
+"Screen.getMode": {
+  "prefix": "Screen.getMode",
+  "body": [
+    "const canvas = Screen.getMode()"
+  ],
+  "description": "Get the current video mode parameters."
+},
+"Screen.setMode": {
+  "prefix": "Screen.setMode",
+  "body": [
+    "Screen.setMode(${1:canvas})"
+  ],
+  "description": "Set the current video mode."
+}
+"Font": {
+  "prefix": "Font",
+  "body": [
+    "const font = new Font(${1:path})"
+  ],
+  "description": "Create a new Font object."
+},
+"Font.color": {
+  "prefix": "Font.color",
+  "body": [
+    "font.color = ${1:Color.new(255, 255, 255, 128)}"
+  ],
+  "description": "Set the font tinting color."
+},
+"Font.scale": {
+  "prefix": "Font.scale",
+  "body": [
+    "font.scale = ${1:1.0}"
+  ],
+  "description": "Set the font scale."
+},
+"Font.print": {
+  "prefix": "Font.print",
+  "body": [
+    "font.print($1, $2, $3)"
+  ],
+  "description": "Draw text on the screen."
+},
+"Font.getTextSize": {
+  "prefix": "Font.getTextSize",
+  "body": [
+    "const size = font.getTextSize($1)"
+  ],
+  "description": "Get the size of the text in pixels."
+},
+"Pads.get": {
+  "prefix": "Pads.get",
+  "body": [
+    "const pad = Pads.get($1)"
+  ],
+  "description": "Get the pad object."
+},
+"Pads.getType": {
+  "prefix": "Pads.getType",
+  "body": [
+    "const type = Pads.getType($1)"
+  ],
+  "description": "Get the gamepad type in the specified port."
+},
+"Pads.getPressure": {
+  "prefix": "Pads.getPressure",
+  "body": [
+    "const press = Pads.getPressure($1, $2)"
+  ],
+  "description": "Get the button pressure level."
+},
+"Pads.rumble": {
+  "prefix": "Pads.rumble",
+  "body": [
+    "Pads.rumble($1, $2, $3)"
+  ],
+  "description": "Rumble the gamepad."
+},
+"Pads.check": {
+  "prefix": "Pads.check",
+  "body": [
+    "const ret = Pads.check($1, $2)"
+  ],
+  "description": "Check if the button was pressed on the specified pad."
+},
+"Pads.SELECT": {
+  "prefix": "Pads.SELECT",
+  "body": [
+    "Pads.SELECT"
+  ],
+  "description": "The SELECT button."
+},
+"Pads.START": {
+  "prefix": "Pads.START",
+  "body": [
+    "Pads.START"
+  ],
+  "description": "The START button."
+},
+"Pads.UP": {
+  "prefix": "Pads.UP",
+  "body": [
+    "Pads.UP"
+  ],
+  "description": "The UP button."
+},
+"Pads.RIGHT": {
+  "prefix": "Pads.RIGHT",
+  "body": [
+    "Pads.RIGHT"
+  ],
+  "description": "The RIGHT button."
+},
+"Pads.DOWN": {
+  "prefix": "Pads.DOWN",
+  "body": [
+    "Pads.DOWN"
+  ],
+  "description": "The DOWN button."
+},
+"Pads.LEFT": {
+  "prefix": "Pads.LEFT",
+  "body": [
+    "Pads.LEFT"
+  ],
+  "description": "The LEFT button."
+},
+"Pads.TRIANGLE": {
+  "prefix": "Pads.TRIANGLE",
+  "body": [
+    "Pads.TRIANGLE"
+  ],
+  "description": "The TRIANGLE button."
+},
+"Pads.CIRCLE": {
+  "prefix": "Pads.CIRCLE",
+  "body": [
+    "Pads.CIRCLE"
+  ],
+  "description": "The CIRCLE button."
+},
+"Pads.CROSS": {
+  "prefix": "Pads.CROSS",
+  "body": [
+    "Pads.CROSS"
+  ],
+  "description": "The CROSS button."
+},
+"Pads.SQUARE": {
+  "prefix": "Pads.SQUARE",
+  "body": [
+    "Pads.SQUARE"
+  ],
+  "description": "The SQUARE button."
+},
+"Pads.L1": {
+  "prefix": "Pads.L1",
+  "body": [
+    "Pads.L1"
+  ],
+  "description": "The L1 button."
+},
+"Pads.R1": {
+  "prefix": "Pads.R1",
+  "body": [
+    "Pads.R1"
+  ],
+  "description": "The R1 button."
+},
+"Pads.L2": {
+  "prefix": "Pads.L2",
+  "body": [
+    "Pads.L2"
+  ],
+  "description": "The L2 button."
+},
+"Pads.R2": {
+  "prefix": "Pads.R2",
+  "body": [
+    "Pads.R2"
+  ],
+  "description": "The R2 button."
+},
+"Pads.L3": {
+  "prefix": "Pads.L3",
+  "body": [
+    "Pads.L3"
+  ],
+  "description": "The L3 button."
+},
+"Pads.R3": {
+  "prefix": "Pads.R3",
+  "body": [
+    "Pads.R3"
+  ],
+  "description": "The R3 button."
+}
+"Keyboard.init": {
+  "prefix": "Keyboard.init",
+  "body": [
+    "Keyboard.init()"
+  ],
+  "description": "Initialize keyboard routines."
+},
+"Keyboard.get": {
+  "prefix": "Keyboard.get",
+  "body": [
+    "const c = Keyboard.get()"
+  ],
+  "description": "Get the current character from the keyboard."
+},
+"Keyboard.setRepeatRate": {
+  "prefix": "Keyboard.setRepeatRate",
+  "body": [
+    "Keyboard.setRepeatRate(${1:msec})"
+  ],
+  "description": "Set the keyboard repeat rate."
+},
+"Keyboard.setBlockingMode": {
+  "prefix": "Keyboard.setBlockingMode",
+  "body": [
+    "Keyboard.setBlockingMode(${1:mode})"
+  ],
+  "description": "Set the keyboard blocking mode."
+},
+"Keyboard.deinit": {
+  "prefix": "Keyboard.deinit",
+  "body": [
+    "Keyboard.deinit()"
+  ],
+  "description": "Destroy keyboard routines."
+},
+"Mouse.init": {
+  "prefix": "Mouse.init",
+  "body": [
+    "Mouse.init()"
+  ],
+  "description": "Initialize mouse routines."
+},
+"Mouse.get": {
+  "prefix": "Mouse.get",
+  "body": [
+    "const mouse = Mouse.get()"
+  ],
+  "description": "Get the mouse properties."
+},
+"Mouse.setBoundary": {
+  "prefix": "Mouse.setBoundary",
+  "body": [
+    "Mouse.setBoundary(${1:minx}, ${2:maxx}, ${3:miny}, ${4:maxy})"
+  ],
+  "description": "Set the mouse boundary."
+},
+"Mouse.getMode": {
+  "prefix": "Mouse.getMode",
+  "body": [
+    "const mode = Mouse.getMode()"
+  ],
+  "description": "Get the mouse mode."
+},
+"Mouse.setMode": {
+  "prefix": "Mouse.setMode",
+  "body": [
+    "Mouse.setMode(${1:mode})"
+  ],
+  "description": "Set the mouse mode."
+},
+"Mouse.getAccel": {
+  "prefix": "Mouse.getAccel",
+  "body": [
+    "const accel = Mouse.getAccel()"
+  ],
+  "description": "Get the mouse acceleration."
+},
+"Mouse.setAccel": {
+  "prefix": "Mouse.setAccel",
+  "body": [
+    "Mouse.setAccel(${1:val})"
+  ],
+  "description": "Set the mouse acceleration."
+},
+"Mouse.setPosition": {
+  "prefix": "Mouse.setPosition",
+  "body": [
+    "Mouse.setPosition(${1:x}, ${2:y})"
+  ],
+  "description": "Set the mouse pointer position."
+}
+"System.openFile": {
+  "prefix": "System.openFile",
+  "body": [
+    "const fd = System.openFile(${1:path}, ${2:type})"
+  ],
+  "description": "Open a file."
+},
+"System.readFile": {
+  "prefix": "System.readFile",
+  "body": [
+    "const buffer = System.readFile(${1:file}, ${2:size})"
+  ],
+  "description": "Read data from a file."
+},
+"System.writeFile": {
+  "prefix": "System.writeFile",
+  "body": [
+    "System.writeFile(${1:fd}, ${2:data}, ${3:size})"
+  ],
+  "description": "Write data to a file."
+},
+"System.closeFile": {
+  "prefix": "System.closeFile",
+  "body": [
+    "System.closeFile(${1:fd})"
+  ],
+  "description": "Close a file."
+},
+"System.seekFile": {
+  "prefix": "System.seekFile",
+  "body": [
+    "System.seekFile(${1:fd}, ${2:pos}, ${3:type})"
+  ],
+  "description": "Set the file position indicator."
+},
+"System.sizeFile": {
+  "prefix": "System.sizeFile",
+  "body": [
+    "const size = System.sizeFile(${1:fd})"
+  ],
+  "description": "Get the size of a file."
+},
+"System.doesFileExist": {
+  "prefix": "System.doesFileExist",
+  "body": [
+    "System.doesFileExist(${1:path})"
+  ],
+  "description": "Check if a file exists."
+},
+"System.CurrentDirectory": {
+  "prefix": "System.CurrentDirectory",
+  "body": [
+    "System.CurrentDirectory(${1:path})"
+  ],
+  "description": "Get or set the current directory."
+},
+"System.listDir": {
+  "prefix": "System.listDir",
+  "body": [
+    "const listdir = System.listDir(${1:path})"
+  ],
+  "description": "List files and directories in a directory."
+},
+"System.createDirectory": {
+  "prefix": "System.createDirectory",
+  "body": [
+    "System.createDirectory(${1:path})"
+  ],
+  "description": "Create a new directory."
+},
+"System.removeDirectory": {
+  "prefix": "System.removeDirectory",
+  "body": [
+    "System.removeDirectory(${1:path})"
+  ],
+  "description": "Remove a directory."
+},
+"System.removeFile": {
+  "prefix": "System.removeFile",
+  "body": [
+    "System.removeFile(${1:path})"
+  ],
+  "description": "Remove a file."
+},
+"System.copyFile": {
+  "prefix": "System.copyFile",
+  "body": [
+    "System.copyFile(${1:source}, ${2:dest})"
+  ],
+  "description": "Copy a file."
+},
+"System.moveFile": {
+  "prefix": "System.moveFile",
+  "body": [
+    "System.moveFile(${1:source}, ${2:dest})"
+  ],
+  "description": "Move a file."
+},
+"System.rename": {
+  "prefix": "System.rename",
+  "body": [
+    "System.rename(${1:source}, ${2:dest})"
+  ],
+  "description": "Rename a file or directory."
+},
+"System.sleep": {
+  "prefix": "System.sleep",
+  "body": [
+    "System.sleep(${1:sec})"
+  ],
+  "description": "Sleep for a specified number of seconds."
+},
+"System.getFreeMemory": {
+  "prefix": "System.getFreeMemory",
+  "body": [
+    "const freemem = System.getFreeMemory()"
+  ],
+  "description": "Get the amount of free memory."
+},
+"System.exitToBrowser": {
+  "prefix": "System.exitToBrowser",
+  "body": [
+    "System.exitToBrowser()"
+  ],
+  "description": "Exit to the browser."
+},
+"System.setDarkMode": {
+  "prefix": "System.setDarkMode",
+  "body": [
+    "System.setDarkMode(${1:value})"
+  ],
+  "description": "Set the dark mode."
+},
+"System.getTemperature": {
+  "prefix": "System.getTemperature",
+  "body": [
+    "const temps = System.getTemperature()"
+  ],
+  "description": "Get the system temperature."
+},
+"System.getMCInfo": {
+  "prefix": "System.getMCInfo",
+  "body": [
+    "const info = System.getMCInfo(${1:slot})"
+  ],
+  "description": "Get memory card information."
+},
+"System.getCPUInfo": {
+  "prefix": "System.getCPUInfo",
+  "body": [
+    "const ee_info = System.getCPUInfo()"
+  ],
+  "description": "Get CPU information."
+},
+"System.getGPUInfo": {
+  "prefix": "System.getGPUInfo",
+  "body": [
+    "const gs_info = System.getGPUInfo()"
+  ],
+  "description": "Get GPU information."
+},
+"System.getMemoryStats": {
+  "prefix": "System.getMemoryStats",
+  "body": [
+    "const ram_usage = System.getMemoryStats()"
+  ],
+  "description": "Get memory usage statistics."
+},
+"System.threadCopyFile": {
+  "prefix": "System.threadCopyFile",
+  "body": [
+    "System.threadCopyFile(${1:source}, ${2:dest})"
+  ],
+  "description": "Copy a file asynchronously."
+},
+"System.getFileProgress": {
+  "prefix": "System.getFileProgress",
+  "body": [
+    "const progress = System.getFileProgress()"
+  ],
+  "description": "Get the progress of a file operation."
+}
+"Timer.new": {
+  "prefix": "Timer.new",
+  "body": [
+    "const timer = Timer.new()"
+  ],
+  "description": "Create a new timer."
+},
+"Timer.getTime": {
+  "prefix": "Timer.getTime",
+  "body": [
+    "Timer.getTime(${1:timer})"
+  ],
+  "description": "Get the time from a timer."
+},
+"Timer.setTime": {
+  "prefix": "Timer.setTime",
+  "body": [
+    "Timer.setTime(${1:src}, ${2:value})"
+  ],
+  "description": "Set the time of a timer."
+},
+"Timer.destroy": {
+  "prefix": "Timer.destroy",
+  "body": [
+    "Timer.destroy(${1:timer})"
+  ],
+  "description": "Destroy a timer."
+},
+"Timer.pause": {
+  "prefix": "Timer.pause",
+  "body": [
+    "Timer.pause(${1:timer})"
+  ],
+  "description": "Pause a timer."
+},
+"Timer.resume": {
+  "prefix": "Timer.resume",
+  "body": [
+    "Timer.resume(${1:timer})"
+  ],
+  "description": "Resume a timer."
+},
+"Timer.reset": {
+  "prefix": "Timer.reset",
+  "body": [
+    "Timer.reset(${1:timer})"
+  ],
+  "description": "Reset a timer."
+},
+"Timer.isPlaying": {
+  "prefix": "Timer.isPlaying",
+  "body": [
+    "Timer.isPlaying(${1:timer})"
+  ],
+  "description": "Check if a timer is playing."
+},
+"Sound.setVolume": {
+  "prefix": "Sound.setVolume",
+  "body": [
+    "Sound.setVolume(${1:volume}, ${2:slot})"
+  ],
+  "description": "Set the volume of the sound."
+},
+"Sound.load": {
+  "prefix": "Sound.load",
+  "body": [
+    "const audio = Sound.load(${1:path})"
+  ],
+  "description": "Load a sound."
+},
+"Sound.play": {
+  "prefix": "Sound.play",
+  "body": [
+    "Sound.play(${1:audio}, ${2:slot})"
+  ],
+  "description": "Play a sound."
+},
+"Sound.free": {
+  "prefix": "Sound.free",
+  "body": [
+    "Sound.free(${1:audio})"
+  ],
+  "description": "Free a sound."
+},
+"Sound.isPlaying": {
+  "prefix": "Sound.isPlaying",
+  "body": [
+    "Sound.isPlaying()"
+  ],
+  "description": "Check if a sound is playing."
+},
+"Sound.duration": {
+  "prefix": "Sound.duration",
+  "body": [
+    "const msec = Sound.duration()"
+  ],
+  "description": "Get the duration of a sound."
+},
+"Sound.repeat": {
+  "prefix": "Sound.repeat",
+  "body": [
+    "Sound.repeat(${1:false})"
+  ],
+  "description": "Set sound repeat mode."
+},
+"Sound.pause": {
+  "prefix": "Sound.pause",
+  "body": [
+    "Sound.pause(${1:audio})"
+  ],
+  "description": "Pause a sound."
+},
+"Sound.resume": {
+  "prefix": "Sound.resume",
+  "body": [
+    "Sound.resume(${1:audio})"
+  ],
+  "description": "Resume a sound."
+},
+"Sound.deinit": {
+  "prefix": "Sound.deinit",
+  "body": [
+    "Sound.deinit()"
+  ],
+  "description": "Deinitialize the sound system."
+},
+"Archive.open": {
+  "prefix": "Archive.open",
+  "body": [
+    "const zip = Archive.open(${1:fname})"
+  ],
+  "description": "Open an archive file."
+},
+"Archive.list": {
+  "prefix": "Archive.list",
+  "body": [
+    "const list = Archive.list(${1:zip})"
+  ],
+  "description": "List the contents of an archive."
+},
+"Archive.extractAll": {
+  "prefix": "Archive.extractAll",
+  "body": [
+    "Archive.extractAll(${1:zip})"
+  ],
+  "description": "Extract all files from an archive."
+},
+"Archive.close": {
+  "prefix": "Archive.close",
+  "body": [
+    "Archive.close(${1:zip})"
+  ],
+  "description": "Close an archive file."
+},
+"Archive.untar": {
+  "prefix": "Archive.untar",
+  "body": [
+    "Archive.untar(${1:fname})"
+  ],
+  "description": "Untar an archive file."
+},
+"IOP.loadModule": {
+  "prefix": "IOP.loadModule",
+  "body": [
+    "const result = IOP.loadModule(${1:fname}, ${2:arg_len}, ${3:args})"
+  ],
+  "description": "Load an IOP module."
+},
+"IOP.loadModuleBuffer": {
+  "prefix": "IOP.loadModuleBuffer",
+  "body": [
+    "const result = IOP.loadModuleBuffer(${1:mod_buf}, ${2:arg_len}, ${3:args})"
+  ],
+  "description": "Load an IOP module from a buffer."
+},
+"IOP.loadDefaultModule": {
+  "prefix": "IOP.loadDefaultModule",
+  "body": [
+    "IOP.loadDefaultModule(${1:mod_id})"
+  ],
+  "description": "Load a default IOP module."
+},
+"IOP.reset": {
+  "prefix": "IOP.reset",
+  "body": [
+    "IOP.reset()"
+  ],
+  "description": "Reset the IOP."
+},
+"IOP.getMemoryStats": {
+  "prefix": "IOP.getMemoryStats",
+  "body": [
+    "const stats = IOP.getMemoryStats()"
+  ],
+  "description": "Get memory usage statistics of the IOP."
+},
+"Network.initStatic": {
+  "prefix": "Network.initStatic",
+  "body": [
+    "Network.init(${1:\"192.168.0.10\"}, ${2:\"255.255.255.0\"}, ${3:\"192.168.0.1\"}, ${4:\"192.168.0.1\"})"
+  ],
+  "description": "Initialize the network in static mode."
+},
+"Network.initDynamic": {
+  "prefix": "Network.initDynamic",
+  "body": [
+    "Network.init()"
+  ],
+  "description": "Initialize the network in DHCP mode."
+},
+"Network.getConfig": {
+  "prefix": "Network.getConfig",
+  "body": [
+    "const conf = Network.getConfig()"
+  ],
+  "description": "Get the network configuration."
+},
+"Network.deinit": {
+  "prefix": "Network.deinit",
+  "body": [
+    "Network.deinit()"
+  ],
+  "description": "Deinitialize the network module."
+},
+"Request": {
+  "prefix": "Request",
+  "body": [
+    "const r = new Request()"
+  ],
+  "description": "Create a new request object."
+},
+"Request.get": {
+  "prefix": "Request.get",
+  "body": [
+    "r.get(${1:url})"
+  ],
+  "description": "Send a GET request."
+},
+"Request.head": {
+  "prefix": "Request.head",
+  "body": [
+    "r.head(${1:url})"
+  ],
+  "description": "Send a HEAD request."
+},
+"Request.post": {
+  "prefix": "Request.post",
+  "body": [
+    "r.post(${1:url}, ${2:data})"
+  ],
+  "description": "Send a POST request."
+},
+"Request.download": {
+  "prefix": "Request.download",
+  "body": [
+    "r.download(${1:url}, ${2:fname})"
+  ],
+  "description": "Download a file."
+},
+"Request.asyncGet": {
+  "prefix": "Request.asyncGet",
+  "body": [
+    "r.asyncGet(${1:url})"
+  ],
+  "description": "Send an asynchronous GET request."
+},
+"Request.asyncDownload": {
+  "prefix": "Request.asyncDownload",
+  "body": [
+    "r.asyncDownload(${1:url}, ${2:fname})"
+  ],
+  "description": "Download a file asynchronously."
+},
+"Request.ready": {
+  "prefix": "Request.ready",
+  "body": [
+    "r.ready(${1:timeout}, ${2:conn_timeout})"
+  ],
+  "description": "Check if the request is ready."
+},
+"Request.getAsyncData": {
+  "prefix": "Request.getAsyncData",
+  "body": [
+    "r.getAsyncData()"
+  ],
+  "description": "Get the asynchronous request data."
+},
+"Request.getAsyncSize": {
+  "prefix": "Request.getAsyncSize",
+  "body": [
+    "r.getAsyncSize()"
+  ],
+  "description": "Get the size of the asynchronous request data."
+}
+"Socket": {
+  "prefix": "Socket",
+  "body": [
+    "const s = new Socket(${1:domain}, ${2:type})"
+  ],
+  "description": "Create a new Socket instance."
+},
+"Socket.connect": {
+  "prefix": "Socket.connect",
+  "body": [
+    "s.connect(${1:host}, ${2:port})"
+  ],
+  "description": "Connect to the specified host and port."
+},
+"Socket.bind": {
+  "prefix": "Socket.bind",
+  "body": [
+    "s.bind(${1:host}, ${2:port})"
+  ],
+  "description": "Bind the socket to the specified host and port."
+},
+"Socket.listen": {
+  "prefix": "Socket.listen",
+  "body": [
+    "s.listen()"
+  ],
+  "description": "Listen for incoming connections."
+},
+"Socket.send": {
+  "prefix": "Socket.send",
+  "body": [
+    "s.send(${1:data})"
+  ],
+  "description": "Send data with a Buffer."
+},
+"Socket.recv": {
+  "prefix": "Socket.recv",
+  "body": [
+    "s.recv(${1:size})"
+  ],
+  "description": "Receive data into a buffer."
+},
+"Socket.close": {
+  "prefix": "Socket.close",
+  "body": [
+    "s.close()"
+  ],
+  "description": "Close the socket."
+},
+"WebSocket": {
+  "prefix": "WebSocket",
+  "body": [
+    "const s = new WebSocket(${1:url})"
+  ],
+  "description": "Create a new WebSocket instance."
+},
+"WebSocket.send": {
+  "prefix": "WebSocket.send",
+  "body": [
+    "s.send(${1:data})"
+  ],
+  "description": "Send data with a Buffer."
+},
+"WebSocket.recv": {
+  "prefix": "WebSocket.recv",
+  "body": [
+    "s.recv()"
+  ],
+  "description": "Receive data into a buffer."
+}
+}
